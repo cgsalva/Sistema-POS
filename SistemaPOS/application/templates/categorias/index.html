@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<div class="container">
+	<div>
+		<h1 class="display-6">Categorias</h1>
+		<a href="#" class="btn btn-success">Agregar</a>
+		<button type="button" class="btn btn-primary" id="btnGenerarPDF"><i class="bi bi-file-earmark-pdf-fill"></i> Descargar PDF</button>
+	</div>
+
+	<table class="table table-hover mt-3">
+		<thead>
+			<tr>
+				<th class="col">Id</th>
+				<th class="col">Nombre</th>
+				<th class="col">Descripción</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody class="table-group-divider">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<a href="#" class="btn btn-sm btn-dark"><i class="bi bi-pencil-square"></i></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Login{% endblock %}
+
+{% block contenido %}
+<style>
+    body {
+        background-color: #343a40;
+    }
+    .login {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .login .login-content {
+        min-width: 0;
+        flex-grow: 1;
+    }
+    .login .login-footer {
+        min-width: 0;
+    }
+</style>
+<div class="login">
+    <div class="login-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="card card-login mx-auto mt-3">
+                        <div class="card-header">
+                            <h3 class="text-center display-6 my-2">
+                                <img src="{{url_for('static', filename = 'images/icon.png')}}" width="48">
+                                Sistema POS
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{url_for('auth.login')}}" method="POST" autocomplete="off">
+                                <div class="input-group flex-nowrap mt-3">
+                                    <span class="input-group-text" id="addon-wrapping">
+                                        <i class="bi bi-person-fill"></i>
+                                    </span>
+                                    <input type="text" class="form-control pt-2 pb-2" name="username" placeholder="Usuario" required autofocus>
+                                </div>
+                                <div class="input-group flex-nowrap mt-3">
+                                    <span class="input-group-text" id="addon-wrapping">
+                                        <i class="bi bi-key-fill"></i>
+                                    </span>
+                                    <input type="password" class="form-control pt-2 pb-2" name="password" placeholder="Contraseña" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3 mb-3">Ingresar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
